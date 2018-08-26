@@ -1,0 +1,120 @@
+// + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
+//
+// a11y Config
+//
+// + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
+
+.modal-dialog-access-config
+{
+    .dialog-content
+    {
+        top: 9rem;
+        left: auto;
+        right: 8.7rem;
+        transform: translate(0%, 0%);
+
+        padding: 0;
+        width: 35rem;
+        
+        box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.5);
+
+        background-color: $white;
+        
+        text-align: center;
+
+        &::before
+        {  
+            content: '';
+            display: block;
+
+            position: absolute;
+            bottom: 100%;
+            left: 5rem; 
+            z-index: 5002;    
+
+            @include triangle(12px, $white, up);
+        }
+
+        h1
+        {
+            @include access-hidden;
+        }
+
+        fieldset  
+        {
+            display: block;
+        }
+
+        legend
+        {
+            display: block;
+            padding: 1rem 0 1rem 1.4rem;
+            
+            width: 100%;
+            
+            border-bottom: 0.1rem solid darken($gray-300,10%);
+
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        fieldset ~ fieldset legend
+        {
+            padding-top: 1rem;
+            border-top: 0.1rem solid darken($gray-300,10%);
+        }
+
+        input
+        {
+            @include access-hidden;
+        }
+
+        label
+        {
+            display: block;
+            padding: 1rem 2rem;
+
+            border: 0.1rem solid $red;
+            background-color: $white;
+            color: $red;
+
+            transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+            @include hover
+            {
+                border-color: $red;
+                background-color: $red;
+                color: $white;
+            }
+        }
+
+        label ~ label
+        {
+            margin-left: 1rem;
+        }
+
+        input:focus + label
+        {
+            outline: 0.1rem dashed $primary;
+            outline-offset: 0.4rem;
+        }
+
+        input:checked + label
+        {
+            border-color: $red;
+            background-color: $red;
+            color: $white;
+        }
+    }
+}
+
+.modal-dialog-access-config--item
+{
+    display: inline-block;
+    vertical-align: top;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

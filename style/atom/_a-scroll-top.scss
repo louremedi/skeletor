@@ -1,0 +1,37 @@
+.a-scroll-top
+{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+
+    text-align: center;
+
+    a
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 4.4rem;
+        height: 4.4rem;
+        
+        border: 0.2rem solid;
+        
+        color: $primary;
+        line-height: 4.4rem;
+
+        text-decoration: none;
+
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+        @include icon(before, icon-arrow-up);
+
+        @include hover
+        {
+            color: $white;
+            background-color: $primary; 
+            border-color: $primary; 
+
+            outline-color: $primary;
+        }
+    }
+}

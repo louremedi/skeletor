@@ -1,0 +1,390 @@
+$width_button : 4rem;
+
+.carrousel
+{
+  position: relative;
+  overflow: hidden;
+
+   .invisible
+   {
+      @include access-hidden;
+   }
+}
+
+.carrousel__container
+{
+  position: relative;
+  overflow: hidden;
+
+  white-space: nowrap;
+  word-spacing: -0.25em;
+
+  padding-left: $width_button;
+  padding-right: $width_button;
+}
+
+.carrousel__content
+{
+  @include clearAfter;
+
+   white-space: normal;
+   word-spacing: normal;
+}
+
+.carrousel__content[aria-hidden=true]
+{
+  display: none;
+}
+
+.skeletor-carrousel__control__list
+{
+  display: block;
+
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 20;
+
+  margin: 0 !important;
+  padding: 0;
+
+  text-align: center !important;
+
+  list-style-type: none;
+
+  li
+  {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.5rem;
+
+    &::before
+    {
+      display: none !important;
+    }
+  }
+}
+
+// .skeletor-carrousel__control__list a:hover,
+// .skeletor-carrousel__control__list a:active
+// {
+//   opacity: 0.7;
+// }
+//
+// .skeletor-carrousel__control__list a:focus,
+// .skeletor-carrousel__control__list a[aria-selected="true"]
+// {
+//   opacity: 1;
+//   background-color: $black;
+// }
+
+// .skeletor-carrousel__control__list span
+// {
+//    position: absolute !important;
+//    overflow: hidden;
+//    width: 1px;
+//    height: 1px;
+//    padding: 0;
+//    border: 0;
+//    clip: rect(1px, 1px, 1px, 1px);
+// }
+
+// .skeletor-carrousel__control__list span:before,
+// .skeletor-carrousel__control__list span:after
+// {
+//   display: none;
+// }
+
+.skeletor-carrousel__control__list__item,
+.images-carrousel__control__list__item
+{
+  display: inline-block;
+  margin: 0 .5rem;
+}
+
+.skeletor-carrousel__control__list__link,
+.images-carrousel__control__list__link
+{
+  position: relative;
+  display: block;
+
+  width: 0.7rem;
+  height: 0.7rem;
+
+  border-radius: 100%;
+
+  background-color: $white;
+  box-shadow: 0px 0px 0px 1px $black;
+
+  color: $white;
+  font-size: 0;
+  text-align: center;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+
+  &:focus,
+  &:hover,
+  &:active,
+  &[aria-selected=true]
+  {
+    background-color: $black;
+    box-shadow: 0px 0px 0px 2px $black;
+  }
+
+}
+
+.skeletor-carrousel__button-container,
+.images-carrousel__button-container
+{
+  position: absolute;
+  top: 50%;
+  margin-top: -($width_button / 2);
+}
+
+.skeletor-carrousel__button__previous
+{
+   left: 0rem;
+   z-index: 10;
+
+   button
+   {
+      @include icon(before, icon-arrow-left);
+   }
+}
+
+.skeletor-carrousel__button__next
+{
+   right: 0rem;
+   z-index: 11;
+
+   button
+   {
+      @include icon(before, icon-arrow-right);
+   }
+}
+
+.skeletor-carrousel__button__button,
+.images-carrousel__button__button
+{
+   margin: 0;
+   padding: 0;
+
+   background: transparent;
+
+   img
+   {
+      @include access-hidden;
+   }
+}
+
+.js-carrousel__button__button
+{
+  position: relative;
+  overflow: hidden;
+
+  display: inline-block;
+
+  @include reset-btn;
+
+  width: $width_button;
+  height: $width_button;
+
+  background-color: $white;
+
+  font-size: 0;
+  color: $black;
+
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &::before
+  {
+    position: relative;
+    z-index: 60;
+
+    display: inline-block;
+    font-size: 3rem !important;
+  }
+
+  @include hover
+  {
+    background-color: $gray-500;
+  }
+  
+  &:focus
+  {
+    outline: 0.2rem dotted $black;
+  }
+}
+
+//
+// transition slide
+//
+.slide .carrousel__content
+{
+   position: relative;
+   visibility: visible;
+
+   display: inline-block;
+   vertical-align: top;
+
+   width: 100%;
+
+   transition: left .3s ease;
+}
+
+.slide .carrousel__content.visibility-off
+{
+  visibility: hidden;
+}
+
+.carrouselslide-1-1.slide > div,
+.carrouselslide-2-1.slide > div,
+.carrouselslide-3-1.slide > div,
+.carrouselslide-4-1.slide > div,
+.carrouselslide-6-1.slide > div,
+.carrouselslide-7-1.slide > div,
+.carrouselslide-8-1.slide > div,
+.carrouselslide-9-1.slide > div,
+.carrouselslide-10-1.slide > div
+{
+  left: 0;
+}
+
+.carrouselslide-1-2.slide > div,
+.carrouselslide-2-2.slide > div,
+.carrouselslide-3-2.slide > div,
+.carrouselslide-4-2.slide > div,
+.carrouselslide-5-2.slide > div,
+.carrouselslide-6-2.slide > div,
+.carrouselslide-7-2.slide > div,
+.carrouselslide-8-2.slide > div,
+.carrouselslide-9-2.slide > div,
+.carrouselslide-10-2.slide > div
+{
+  left: -100%;
+}
+
+.carrouselslide-1-3.slide > div,
+.carrouselslide-2-3.slide > div,
+.carrouselslide-3-3.slide > div,
+.carrouselslide-4-3.slide > div,
+.carrouselslide-5-3.slide > div,
+.carrouselslide-6-3.slide > div,
+.carrouselslide-7-3.slide > div,
+.carrouselslide-8-3.slide > div,
+.carrouselslide-9-3.slide > div,
+.carrouselslide-10-3.slide > div
+{
+  left: -200%;
+}
+
+.carrouselslide-1-4.slide > div,
+.carrouselslide-2-4.slide > div,
+.carrouselslide-3-4.slide > div,
+.carrouselslide-4-4.slide > div,
+.carrouselslide-5-4.slide > div,
+.carrouselslide-6-4.slide > div,
+.carrouselslide-7-4.slide > div,
+.carrouselslide-8-4.slide > div,
+.carrouselslide-9-4.slide > div,
+.carrouselslide-10-4.slide > div
+{
+  left: -300%;
+}
+
+.carrouselslide-1-5.slide > div,
+.carrouselslide-2-5.slide > div,
+.carrouselslide-3-5.slide > div,
+.carrouselslide-4-5.slide > div,
+.carrouselslide-5-5.slide > div,
+.carrouselslide-6-5.slide > div,
+.carrouselslide-7-5.slide > div,
+.carrouselslide-8-5.slide > div,
+.carrouselslide-9-5.slide > div,
+.carrouselslide-10-5.slide > div
+{
+  left: -400%;
+}
+
+.slide .carrousel__content[aria-hidden=true]
+{
+  display: inline-block;
+}
+
+//
+// transition fade
+//
+.fade.carrousel__container
+{
+  opacity: 1;
+}
+
+.fade .carrousel__content
+{
+  -webkit-animation: fadein 1.5s;
+  animation: fadein 1.5s;
+}
+
+.fade .carrousel__content[aria-hidden=true]
+{
+  -webkit-animation: fadeout 1s;
+  animation: fadeout 1s;
+}
+
+@-webkit-keyframes fadeout
+{
+   0%
+   {
+      opacity: 1;
+   }
+   100%
+   {
+      opacity: 0;
+   }
+}
+
+@keyframes fadeout
+{
+   0%
+   {
+      opacity: 1;
+   }
+   100%
+   {
+      opacity: 0;
+   }
+}
+
+@-webkit-keyframes fadein
+{
+   0%
+   {
+      opacity: 0;
+   }
+   40%
+   {
+      opacity: 1;
+   }
+   100%
+   {
+      opacity: 1;
+   }
+}
+
+@keyframes fadein
+{
+   0%
+   {
+      opacity: 0;
+   }
+   40%
+   {
+      opacity: 1;
+   }
+   100%
+   {
+      opacity: 1;
+   }
+}

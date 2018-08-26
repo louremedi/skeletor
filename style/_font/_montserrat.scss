@@ -1,0 +1,126 @@
+// + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+//
+//  Montserrat : Google Font
+//  https://fonts.google.com/specimen/Montserrat
+//
+//  1 :: thin 100
+//  2 :: extralight 200
+//  3 :: light 300
+//  4 :: regular 400
+//  5 :: medium 500
+//  6 :: semibold 600
+//  7 :: bold 700
+//  8 :: extrabold 800
+//  9 :: black 900
+//
+// + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+$font_name_family : 'montserrat';
+
+$font_name_1 : 'montserrat-thin';
+$font_path_1 : '../font/#{$font_name_family}/#{$font_name_1}';
+
+@font-face {
+    font-family: $font_name_family;
+    src: url('#{$font_path_1}.woff') format('woff2'),
+         url('#{$font_path_1}.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font_name_2 : 'montserrat-extralight';
+$font_path_2 : '../font/#{$font_name_family}/#{$font_name_2}';
+
+@font-face {
+    font-family: $font_name_family;
+    src: url('#{$font_path_2}.woff') format('woff2'),
+         url('#{$font_path_2}.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font_name_3 : 'montserrat-light';
+$font_path_3 : '../font/#{$font_name_family}/#{$font_name_3}';
+
+@font-face {
+    font-family: $font_name_family;
+    src: url('#{$font_path_3}.woff') format('woff2'),
+         url('#{$font_path_3}.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font_name_4 : 'montserrat-regular';
+$font_path_4 : '../font/#{$font_name_family}/#{$font_name_4}';
+
+@font-face {
+    font-family: $font_name_family;
+    src: url('#{$font_path_4}.woff') format('woff2'),
+         url('#{$font_path_4}.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font_name_5 : 'montserrat-medium';
+$font_path_5 : '../font/#{$font_name_family}/#{$font_name_5}';
+
+@font-face {
+    font-family: $font_name_family;
+    src: url('#{$font_path_5}.woff') format('woff2'),
+         url('#{$font_path_5}.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font_name_6 : 'montserrat-semibold';
+$font_path_6 : '../font/#{$font_name_family}/#{$font_name_6}';
+
+@font-face {
+    font-family: $font_name_family;
+    src: url('#{$font_path_6}.woff') format('woff2'),
+         url('#{$font_path_6}.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font_name_7 : 'montserrat-bold';
+$font_path_7 : '../font/#{$font_name_family}/#{$font_name_7}';
+
+@font-face {
+    font-family: $font_name_family;
+    src: url('#{$font_path_7}.woff') format('woff2'),
+         url('#{$font_path_7}.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font_name_8 : 'montserrat-extrabold';
+$font_path_8 : '../font/#{$font_name_family}/#{$font_name_8}';
+
+@font-face {
+    font-family: $font_name_family;
+    src: url('#{$font_path_8}.woff') format('woff2'),
+         url('#{$font_path_8}.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font_name_9 : 'montserrat-black';
+$font_path_9 : '../font/#{$font_name_family}/#{$font_name_9}';
+
+@font-face {
+    font-family: $font_name_family;
+    src: url('#{$font_path_9}.woff') format('woff2'),
+         url('#{$font_path_9}.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

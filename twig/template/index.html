@@ -1,0 +1,25 @@
+{% extends "../_layout.twig" %}
+
+{% block title %}
+{% set title = 'Accueil' %}
+{% endblock %}
+
+{% block bodyclass %}
+{% set bodyclass = 'home' %}
+{% endblock %}
+
+{% block header %}
+
+{% include "../structure/header.html" %} 
+
+{% endblock %}
+
+{% block main %}
+
+<h2 class="h2">Font</h2>
+{% include "../molecule/m-font.html" %}
+
+<h2 class="h2">Fonticon</h2>
+{% include "../molecule/m-fonticon.html" %}
+
+{% endblock %}

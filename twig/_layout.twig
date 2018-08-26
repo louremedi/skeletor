@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Skeletor - Cherche pas, t'as tort !">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    {% include "./partials/script-top.html" %}
+
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+    <link rel="stylesheet" href="./style/print.css" type="text/css" media="print" />
+
+    {% block title %}{% endblock %}
+    <title>Skeletor - {{ title }}</title>
+  </head>
+
+  {% block bodyclass %}{% endblock %}
+  <body>
+
+    <div class="body-wrapper {{ bodyclass }}" id="top">
+
+        {# {% include "./structure/nav.html" %} #}
+
+        {% block header %}{% endblock %}
+
+        <main id="main" class="main" role="main">
+
+            {% block main %}{% endblock %}
+
+            <div class="a-scroll-top">
+                <a href="#top">
+                    <span class="access-hidden">Haut de page</span> 
+                </a>
+            </div>
+
+        </main>
+
+        {% include "./structure/footer.html" %}
+
+        {% block modal %}{% endblock %}
+
+    </div>
+    <!-- / body-wrapper --> 
+
+    {% include "./partials/script-bottom.html" %}
+  
+  </body>
+</html>

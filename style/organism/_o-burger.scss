@@ -1,0 +1,86 @@
+.button-nav-wrapper
+{
+    @include reset-btn;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1300; 
+    overflow: hidden;
+
+    display: block;
+
+    width: 4rem;
+    height: 4rem;
+
+    border-right: 0.1rem solid $gray-500;
+
+    background-color: $white;
+    transition: background-color 0.3s ease;
+
+    &::after{ display: none !important; }
+
+    span
+    {
+        opacity: 1;
+        display: block;
+
+        position: absolute;
+        left: 50%;
+
+        margin-left: -1.1rem; 
+
+        width: 2.2rem;
+        height: 0.2rem;
+
+        background-color: $black;
+
+        transform: rotate(0deg);
+        transition: all .3s ease;
+
+        &:nth-of-type(1)
+        {
+            top: 2.45rem; // pour IE 9
+            top: calc(50% - 0.6rem); 
+        }
+
+        &:nth-of-type(2)
+        { 
+            top: 50%; 
+        }
+
+        &:nth-of-type(3)
+        {
+            top: 3.65rem; // pour IE 9
+            top: calc(50% + 0.6rem);
+        }
+    }
+
+    &.is-active
+    {
+        background-color: $primary;
+
+        span
+        {
+            background-color: $white;
+
+            &:nth-of-type(1),
+            &:nth-of-type(3)
+            {
+                top: 50%;
+                transform: rotate(45deg);
+            }
+
+            &:nth-of-type(2)
+            {
+                opacity: 0;
+                left: -5rem;
+            }
+
+            &:nth-of-type(3)
+            {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

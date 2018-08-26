@@ -1,0 +1,97 @@
+// + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
+//
+// SOURCE
+// https://github.com/edenspiekermann/a11y-dialog
+//
+// + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + 
+
+// Les animations pour gérer l'apparition des modales
+@keyframes overlay_anim
+{ 
+    0% { opacity:0; }
+    100% { opacity: 1; }
+}
+
+@keyframes modal_anim
+{
+    0% { opacity: 0; }  
+    100% { opacity: 1; }
+}
+
+// needed for old browsers 
+dialog 
+{
+    display: block;
+}
+
+// removes scroll when modal is opened 
+body.no-scroll 
+{
+    overflow: hidden;
+}
+
+.dialog
+{
+    &[aria-hidden="true"] 
+    {
+        display: none;
+    }
+
+    h1, .h1
+    {
+        margin-top: 0;
+    }
+}
+
+.dialog-overlay 
+{
+    animation: overlay_anim 0.3s $bezier;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+  
+.dialog-content 
+{
+    animation: modal_anim 0.3s $bezier;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10004;
+    transform: translate(-50%, -50%);
+    
+    padding: 3.5rem 5.5rem;
+    
+    width: 90%;
+    max-width: 100rem;
+
+    border: 0;
+    
+    background-color: $white;
+    
+}
+
+.dialog-close
+{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    z-index: 5001;
+
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font-size: 1.6rem;
+    line-height: 1;
+
+    @include icon(before, icon-close);
+}

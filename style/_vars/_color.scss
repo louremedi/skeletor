@@ -1,0 +1,36 @@
+// colors.scss -- Colors for project
+//
+
+//  *
+//  * @color
+//  * @section Base
+//  *
+
+$black : #202121;  
+$white : #FFF;
+
+$gray-100: #F8F9Fa;
+$gray-200: #E4E4E4;
+$gray-300: #CCC;
+$gray-400: #CED4DA;
+$gray-500: #999999;
+$gray-600: #6C757D;
+$gray-700: #495057;
+$gray-800: #343A40;
+$gray-900: #212529;
+
+$alert    : #D92525;
+$danger   : #D92525;
+$warning  : #F0AD4E;
+$success  : #5CB85C;
+$info     : $gray-500;
+
+$highlight      : #FCF08D;
+
+$placeholder     : #757575;
+$access-color    : #757575;
+
+$red : $alert;
+
+$primary : $black;
+$secondary : $red;

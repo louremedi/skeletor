@@ -1,0 +1,6 @@
+.access-hidden, 
+.visually-hidden,
+.access-hidden
+{
+    @include access-hidden;
+}

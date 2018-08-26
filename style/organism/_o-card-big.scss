@@ -1,0 +1,20 @@
+.o-card-big
+{
+    margin-bottom: 6.2rem;
+    background-color: $gray-500;
+}
+
+.o-card-big--img
+{
+    background: red;
+    
+    .vcenter
+    {
+        height: 46.4rem;
+    }
+}
+
+.o-card-big--txt
+{
+    background: blue;
+}
