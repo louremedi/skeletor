@@ -1,13 +1,11 @@
 # S.K.E.L.E.T.O.R - Cherche pas t'as tort
 
-•• Framework CSS ••
-
-## Les grands principes
+## Framework CSS
 
 ### Base
-- Hérité de Boostrap 4
-- OOCSS et BEM 
-- Architecture en Atomic Design
+- Hérité de Boostrap 4.x.x
+- OOCSS + BEM 
+- Architecture Front-End en Atomic Design
 - Compilation via Gulp
 
 ### CSS
@@ -21,6 +19,17 @@ Ils respectent les patterns d'accessibilité.
 
 ### Accessibilité
 Respecter le RGAA, coder de façon accessible tant en HTML (twig), en CSS et en JS.
+
+## Installation
+
+Via le gulpfile.js
+
+```javascript
+npm install --save-dev
+gulp
+```
+
+Le dossier _**__public**_ sera généré avec tous les dossiers et fichiers (html, css, js).
 
 <hr>
 
